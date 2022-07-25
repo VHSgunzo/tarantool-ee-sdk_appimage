@@ -1,0 +1,28 @@
+#!/bin/bash
+
+print_tarantool_env() {
+    echo "
+This is the virtual environment of Tarantool Enterprise Edition SDK
+
+Available tools:
+    * tarantool — Tarantool main executable
+    * tarantoolctl — utility script for installing additional modules
+    * cartridge - utility script for managing application lifecycle
+    * '$TARANTOOL_EE_SDK_DIR/examples' — sample applications
+    * '$TARANTOOL_EE_SDK_DIR/rocks' — selection of additional open and closed source modules
+"
+}
+
+OLD_PWD="$(pwd)"
+export TARANTOOL_EE_SDK_DIR="$(dirname "$0")"
+echo "[VAR] TARANTOOL_EE_SDK_DIR = '$TARANTOOL_EE_SDK_DIR'"
+cd "$TARANTOOL_EE_SDK_DIR"
+source env.sh
+cd "$OLD_PWD"
+case $1 in
+    cartridge) cartridge "${*:2}" ;;
+    tarantoolctl) tarantoolctl "${*:2}" ;;
+    env) print_tarantool_env
+        /bin/bash --rcfile "$TARANTOOL_EE_SDK_DIR/bashrc" ;;
+    *) tarantool "$@" ;;
+esac

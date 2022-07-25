@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>com.tarantool.io</id>
+    <metadata_license>MIT</metadata_license>
+    <project_license>MIT</project_license>
+    <name>Tarantool EE SDK</name>
+    <summary>Tarantool Enterprise Edition SDK</summary>
+    <description>
+        <p>
+            Tarantool is tolerant of write-heavy loads.
+            It also allows keeping full-featured applications
+            close to the data, thus reducing data access network latency to zero.
+            Large enterprises have demanding requirements for information safety
+            and security. Besides modules for integrating with the company's
+            existing technological suite, Tarantool Enterprise Edition provides
+            tools for administration, deployment, and security management.
+            This edition is more predictable in terms of solution cost and maintenance.
+            For Enterprise Edition users, premium support is available 24/7.
+        </p>
+    </description>
+    <launchable type="desktop-id">com.tarantool.io.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <caption>Tarantool EE SDK</caption>
+            <image type="source" width="1435" height="1357">https://static.tarantool.io/pub/220721-1006-c1439d1/tarantool/images/enterprise/intro.jpg</image>
+        </screenshot>
+    </screenshots>
+    <url type="homepage">https://www.tarantool.io/en/product/enterprise</url>
+</component>

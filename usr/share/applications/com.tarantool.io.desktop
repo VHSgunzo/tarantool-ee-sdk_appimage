@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Tarantool EE SDK
+Comment=Tarantool Enterprise Edition SDK
+Icon=com.tarantool.io
+Categories=Development;
+Terminal=true
+Exec=AppImage env
